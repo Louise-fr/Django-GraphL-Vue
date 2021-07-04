@@ -1,12 +1,13 @@
 from django.conf import settings
 from graphene_django import DjangoObjectType
+from django.contrib.auth.models import User
 
 from blog import models
 
 
 class UserType(DjangoObjectType):
     class Meta:
-        model = settings.AUTH_USER_MODEL
+        model = User
 
 class AuthorType(DjangoObjectType):
     class Meta:
