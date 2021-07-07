@@ -1,0 +1,29 @@
+Projet 
+
+https://realpython.com/python-django-blog/
+
+
+======= Backend ===========
+
+Lancer environnement : 
+	>> cd  C:\Users\Louise\Documents\Code\Python\Django-GraphL-Vue\backend\env
+	>> activate
+Lancer serveur backend :
+	Si premier lancement :
+	>> >> cd C:\Users\Louise\Documents\Code\Python\Django-GraphL-Vue\backend
+	>> python -m pip install -r requirements.txt
+	>> python manage.py runserver
+	Sinon 
+	>> cd C:\Users\Louise\Documents\Code\Python\Django-GraphL-Vue\backend
+	>> python manage.py runserver
+
+
+======= Frontend ===========
+
+
+Si premier lancement :
+	>> npm install @vue/cli
+
+Sinon :
+	>> cd C:\Users\Louise\Documents\Code\Python\Django-GraphL-Vue\frontend
+	>> npm run serve
