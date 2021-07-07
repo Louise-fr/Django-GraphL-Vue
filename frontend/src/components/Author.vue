@@ -16,6 +16,9 @@
 <script>
 import PostList from '@/components/PostList'
 
+
+
+
 export default {
   name: 'Author',
   components: {
@@ -26,6 +29,40 @@ export default {
       author: null,
     }
   },
+
+  async created () {
+      const user = await this.$apollo.query({
+        query: gql`query ($username: String!) {
+          authorByUsername(username: $username) {
+            website
+            bio
+            user {
+              firstName
+              lastName
+              username
+            }
+            postSet {
+              title
+              subtitle
+              publishDate
+              published
+              metaDescription
+              slug
+              tags {
+                name
+              }
+            }
+          }
+        }`,
+        variables: {
+          username: this.$route.params.username,
+        },
+      })
+    this.author = user.data.authorByUsername
+    },
+  
+
+
   computed: {
     displayName () {
       return (
@@ -34,6 +71,9 @@ export default {
         `${this.author.user.firstName} ${this.author.user.lastName}`
       ) || `${this.author.user.username}`
     },
-  },
+
+  
+}
+
 }
 </script>

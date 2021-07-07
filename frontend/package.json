@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "@vue/cli": "^4.5.13",
+    "apollo-boost": "^0.4.9",
     "core-js": "^3.6.5",
+    "graphql": "^15.5.1",
     "vue": "^3.0.0",
+    "vue-apollo": "^3.0.7",
     "vue-loader": "^16.2.0",
     "vue-router": "^4.0.0-0"
   },
