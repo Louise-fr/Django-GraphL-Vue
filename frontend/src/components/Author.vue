@@ -15,7 +15,7 @@
 
 <script>
 import PostList from '@/components/PostList'
-
+import gql from 'graphql-tag'
 
 
 

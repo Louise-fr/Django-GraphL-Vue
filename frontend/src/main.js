@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from '@/router'
 import VueApollo from 'vue-apollo'
 import ApolloClient from 'apollo-boost'
-import gql from 'graphql-tag'
+
 
 
 const apolloClient = new ApolloClient({
@@ -19,10 +19,7 @@ const apolloProvider = new VueApollo({
 
 
 let app = createApp(App)
-app.use(router)
-app.use(gql)
-app.use(apolloProvider)
-app.mount('#app')
+app.use(apolloProvider).use(router).mount('#app')
 
 
   
